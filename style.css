@@ -8,7 +8,6 @@ body {
   background: linear-gradient(120deg, #f36265, #961276);
   height: 100vh;
   background-size: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,6 +66,7 @@ body {
 }
 
 .login__submit {
+  animation: gradient 5s ease-in-out alternate infinite;
   height: 48px;
   width: 100%;
   outline: none;
@@ -91,4 +91,15 @@ body {
   font-size: 12px;
   color: #929292;
   text-decoration: none;
+}
+@keyframes gradient {
+  from {
+    background-position: 0 50%;
+
+  }
+  to {
+    background-position: 100% 50%;
+
+  }
+  
 }
