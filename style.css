@@ -5,8 +5,10 @@ body {
 }
 
 .login {
-  height: 100vh;
   background: linear-gradient(120deg, #f36265, #961276);
+  height: 100vh;
+  background-size: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,6 +58,12 @@ body {
   width: 0;
   margin-bottom: 16px;
   background: linear-gradient(120deg, #f36265, #961276);
+  transition: .3s ease-in-out;
+}
+
+.login__input:focus + .login__input__border::after {
+  width: 100%;
+
 }
 
 .login__submit {
@@ -72,6 +80,12 @@ body {
   border-radius: 4px;
   cursor: pointer;
   transition: 5s ease-in-out;
+}
+
+.login__submit:hover{
+  background-position: right ;
+  
+
 }
 .login__reset {
   font-size: 12px;
