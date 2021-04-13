@@ -1,3 +1,9 @@
+:root{
+  --input-error:red;
+  --button-disabled:#acacac;
+  --button-success: rgb(18, 151, 107);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -64,6 +70,9 @@ body {
   width: 100%;
 
 }
+.login__input__border.error{
+  background: var(--input-error);
+}
 
 .login__submit {
   animation: gradient 5s ease-in-out alternate infinite;
@@ -81,12 +90,27 @@ body {
   cursor: pointer;
   transition: 5s ease-in-out;
 }
+.login__submit:disabled {
+  background: var(--button-disabled);
+  cursor: not-allowed;
+}
 
 .login__submit:hover{
   background-position: right ;
   
 
 }
+
+.login__submit.error{
+  background: var(--input-error);
+}
+
+.login__submit.success{
+  background: var(--button-success);
+
+
+}
+
 .login__reset {
   font-size: 12px;
   color: #929292;
